@@ -1,6 +1,6 @@
 
 import React from 'react';
-import { Mail, Calendar, ArrowRight, CheckCircle2 } from 'lucide-react';
+import { Mail, Calendar, ArrowRight, CheckCircle2, Github, Video } from 'lucide-react';
 
 const packages = [
     {
@@ -52,19 +52,19 @@ const Contact: React.FC = () => {
             
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
                 <div className="bg-upwork-dark rounded-3xl shadow-2xl overflow-hidden lg:flex min-h-[500px] border border-gray-800 mb-20">
-                    {/* Image Section */}
-                    <div className="lg:w-5/12 relative h-72 lg:h-auto bg-gray-800">
-                        {/* Placeholder Image - Replace src with your actual photo URL */}
+                    {/* Image Section - User Picture Placeholder */}
+                    <div className="lg:w-5/12 relative h-96 lg:h-auto bg-gray-800 group">
+                        {/* REPLACE THE SRC BELOW WITH YOUR ACTUAL PHOTO URL */}
                         <img 
-                            src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?q=80&w=1000&auto=format&fit=crop" 
+                            src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?q=80&w=1000&auto=format&fit=crop" 
                             alt="Honelegn - Upwork Expert" 
-                            className="absolute inset-0 w-full h-full object-cover object-top opacity-90"
+                            className="absolute inset-0 w-full h-full object-cover object-center opacity-90 group-hover:opacity-100 transition-opacity duration-500"
                         />
                         <div className="absolute inset-0 bg-gradient-to-t from-upwork-dark via-transparent to-transparent lg:bg-gradient-to-r lg:from-transparent lg:to-upwork-dark"></div>
                         
                         <div className="absolute bottom-0 left-0 p-8 w-full bg-gradient-to-t from-black/90 to-transparent">
-                            <h3 className="text-2xl font-bold text-white">Honelegn</h3>
-                            <p className="text-upwork-green font-medium">Upwork Strategist & Mentor</p>
+                            <h3 className="text-3xl font-bold text-white">Honelegn</h3>
+                            <p className="text-upwork-green font-medium text-lg">Upwork Strategist & Mentor</p>
                         </div>
                     </div>
 
@@ -105,14 +105,29 @@ const Contact: React.FC = () => {
                                 <ArrowRight className="ml-auto text-gray-500 group-hover:text-upwork-green transform group-hover:translate-x-1 transition-all" />
                             </a>
 
-                            {/* Book Call Card */}
-                            <a href="mailto:honelegnw@gmail.com?subject=Book%20Call%20Consultation" className="flex items-center p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-upwork-green/50 transition-all group">
-                                <div className="w-12 h-12 rounded-full bg-white text-upwork-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0">
-                                    <Calendar className="w-6 h-6" />
+                            {/* Book Call Card - Enhanced Visuals */}
+                            <a href="mailto:honelegnw@gmail.com?subject=Book%20Call%20Consultation" className="relative overflow-hidden flex items-center p-4 bg-gradient-to-r from-green-900/50 to-gray-800 rounded-xl border border-upwork-green/30 hover:border-upwork-green transition-all group">
+                                {/* Abstract Visual Background */}
+                                <div className="absolute top-0 right-0 -mt-4 -mr-4 w-24 h-24 bg-upwork-green rounded-full opacity-20 blur-2xl group-hover:opacity-30 transition-opacity"></div>
+                                
+                                <div className="w-12 h-12 rounded-full bg-white text-upwork-dark flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0 z-10">
+                                    <Video className="w-6 h-6 text-upwork-green" />
+                                </div>
+                                <div className="ml-5 z-10">
+                                    <p className="text-sm text-upwork-green font-bold uppercase tracking-wide">Priority Access</p>
+                                    <span className="text-lg sm:text-xl font-bold text-white">Book a Live Consultation</span>
+                                </div>
+                                <ArrowRight className="ml-auto text-white group-hover:translate-x-1 transition-all z-10" />
+                            </a>
+
+                            {/* GitHub Card */}
+                            <a href="https://github.com/" target="_blank" rel="noopener noreferrer" className="flex items-center p-4 bg-white/5 rounded-xl border border-white/10 hover:bg-white/10 hover:border-upwork-green/50 transition-all group">
+                                <div className="w-12 h-12 rounded-full bg-gray-900 border border-gray-700 text-white flex items-center justify-center shadow-lg group-hover:scale-110 transition-transform shrink-0">
+                                    <Github className="w-6 h-6" />
                                 </div>
                                 <div className="ml-5">
-                                    <p className="text-sm text-gray-400">Consultation</p>
-                                    <span className="text-lg sm:text-xl font-bold text-white">Book a Call</span>
+                                    <p className="text-sm text-gray-400">View Code</p>
+                                    <span className="text-lg sm:text-xl font-bold text-white">Github Profile</span>
                                 </div>
                                 <ArrowRight className="ml-auto text-gray-500 group-hover:text-white transform group-hover:translate-x-1 transition-all" />
                             </a>
